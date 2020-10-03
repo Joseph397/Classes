@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes</title>
+  </head>
+  <body>
+    <script>
+      // // How it was done with prototypes
+      // function Enemy(life, name, level) {
+      //     this.life = life;
+      //     this.name = name;
+      //     this.level = level;
+      // }
+
+      // Enemy.prototype.getInfo = function() {
+      //     console.log(this.life, this.name, this.level);
+      // };
+
+      // Classes - A better way
+      class Enemy {
+        constructor(life, name, level) {
+          this.life = life;
+          this.name = name;
+          this.level = level;
+        }
+        getInfo() {
+          console.log(this.life, this.name, this.level);
+        }
+      }
+
+      const turtle = new Enemy(25, "Squidlebuggl", 10);
+      const bug = new Enemy(1, "Bug", 10);
+      console.log(turtle);
+      console.log(bug);
+    </script>
+  </body>
+</html>

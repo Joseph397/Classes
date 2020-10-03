@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes2</title>
+</head>
+<body>
+    <script>
+        class Enemy {
+        constructor(life, name, level) {
+          this.life = life;
+          this.name = name;
+          this.level = level;
+        }
+        getInfo() {
+          console.log(this.life, this.name, this.level);
+        }
+      }
+
+        class Bug extends Enemy{
+            constructor(life, name, level, legs, dmg){
+                super(life,name,level);
+                // 
+                this.legs = legs;
+                this.dmg = dmg;
+            }
+        }
+
+        const john = new Bug(10, 'Buggy', 1,6)
+
+    </script>
+</body>
+</html>
